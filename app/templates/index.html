@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% block head %}
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css"
+          href="{{ url('static', filename='style.css') }}"/>
+    <script src="{{ url('static', filename='script.js') }}"></script>
+    <title>URL shortener</title>
+    {% endblock %}
+</head>
+<body>
+<div class="main">
+    <h1>URL Shortener</h1>
+    <form action="/" method="post" accept-charset="utf-8"
+          enctype="application/x-www-form-urlencoded">
+        <input id="url" name="url" type="text" value="" placeholder="{{ placeholder }}" autofocus/>
+        {% if creation_url %}
+            <input id="copy" type="button" value="copy"/>
+            <input id="reshort" type="button" value="reshort"/>
+        {% else %}
+            <input type="submit" value="shorten"/>
+        {% endif %}
+    </form>
+    <p id="err">{{err_msg}}</p>
+</div>
+</body>
+</html>

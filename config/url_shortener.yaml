@@ -1,0 +1,6 @@
+postgres:
+  database: shorturl
+  user: shorturl_user
+  password: shorturl_pass
+  host: localhost
+  port: 5433

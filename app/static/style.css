@@ -1,0 +1,10 @@
+
+.main {
+    margin-left:auto;
+    margin-right:auto;
+    width: auto;
+    text-align:center;
+}
+#err {
+    color : red;
+}
